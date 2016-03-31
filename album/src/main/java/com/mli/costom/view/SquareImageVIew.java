@@ -18,22 +18,22 @@ import android.widget.ImageView;
  * Created by limian on 2016/3/31.
  * 中间显示为正方形图片的ImageView（ImageView不一定是正方形）
  */
-public class SquareImageVIew extends ImageView {
+public class SquareImageView extends ImageView {
 
-    public SquareImageVIew(Context context) {
+    public SquareImageView(Context context) {
         super(context);
     }
 
-    public SquareImageVIew(Context context, AttributeSet attrs) {
+    public SquareImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public SquareImageVIew(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SquareImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @SuppressLint("NewApi")
-    public SquareImageVIew(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public SquareImageView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 

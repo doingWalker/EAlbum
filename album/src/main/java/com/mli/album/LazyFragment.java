@@ -15,10 +15,12 @@ public abstract class LazyFragment extends Fragment {
 
 
     private String tag = "";
+    private boolean isVisible;
     public LazyFragment(String tag) {
         this.tag = tag;
     }
     public abstract void startLoad();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Common.logI(tag  + "onCreate");
@@ -27,15 +29,21 @@ public abstract class LazyFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = super.onCreateView(inflater, container, savedInstanceState);
+
+        startLoad();
         Common.logI(tag + "onCreateView");
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
     }
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        startLoad();
-        Common.logI( tag + getUserVisibleHint());
+        if(getUserVisibleHint()) {
+            isVisible = true;
+        }else {
+            isVisible = false;
+        }
     }
 
 

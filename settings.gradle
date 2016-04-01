@@ -1,1 +1,1 @@
-include ':album'
+include ':autolayout', ':album', ':appcompat_v7'
